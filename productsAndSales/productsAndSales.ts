@@ -49,7 +49,7 @@ async function getSales(): Promise<Sale[]> {
     return sales;
 }
 
-async function getSalesData(): Promise <SalesData> {
+async function getSalesData(): Promise<SalesData> {
     
     const productsPromise = getProducts();
     const salesPromise = getSales();
@@ -58,6 +58,18 @@ async function getSalesData(): Promise <SalesData> {
         products: await productsPromise,
         sales: await salesPromise
     };
+}
+
+function buidViewModel(data: SalesData, year: number) : ProductSalesMonths[] {
+    const productSalesOrderedByProduct: ProductsSalesMonths[] = [];
+    const productSalesByProductId: ProductSalesMonths[] = [];
+    data.products.forEach(p => {
+        const productSales: ProductSalesMonths = {
+            product: p,
+            salesByMonth: [...emptySalesByMonth],
+            total: 0
+        };
+    })
 }
 
 async function main(): Promise<void> {

@@ -31,6 +31,17 @@ async function getSalesData() {
         sales: await salesPromise
     };
 }
+function buidViewModel(data, year) {
+    const productSalesOrderedByProduct = [];
+    const productSalesByProductId = [];
+    data.products.forEach(p => {
+        const productSales = {
+            product: p,
+            salesByMonth: [...emptySalesByMonth],
+            total: 0
+        };
+    });
+}
 async function main() {
     const salesData = await getSalesData();
     console.log(salesData);
