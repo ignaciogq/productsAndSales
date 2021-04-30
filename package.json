@@ -1,0 +1,22 @@
+{
+  "name": "deluxe-cars",
+  "version": "1.0.0",
+  "description": "sitio web para un concesionario de coches deluxe car",
+  "main": "index.js",
+  "scripts": {
+    "live-server": "live-server --host=localhost",
+    "mcd": "node mcd.js",
+    "pruebas": "node pruebas.js",
+    "typescript": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ignaciogq/deluxe-cars.git"
+  },
+  "author": "Ignacio García Quintana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ignaciogq/deluxe-cars/issues"
+  },
+  "homepage": "https://github.com/ignaciogq/deluxe-cars#readme"
+}
